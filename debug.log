@@ -1,0 +1,20 @@
+2025-06-22 12:18:53.291 | INFO     | pipecat:<module>:13 - ᓚᘏᗢ Pipecat 0.0.67 ᓚᘏᗢ
+2025-06-22 12:18:53.652 | INFO     | __main__:<module>:50 - API endpoints mounted
+2025-06-22 12:18:56.615 | INFO     | food_ordering:<module>:26 - WebSocket server imported successfully
+2025-06-22 12:18:56.615 | INFO     | __main__:main:286 - Successfully loaded bot from agent.py
+2025-06-22 12:18:56.615 | INFO     | __main__:main:289 - Detected WebRTC-compatible bot, starting web server...
+2025-06-22 12:18:56.615 | INFO     | __main__:main:349 - WebSocket server thread started
+2025-06-22 12:18:56.615 | INFO     | __main__:start_server:313 - Starting WebSocket server on port 8766...
+2025-06-22 12:18:56.615 | INFO     | __main__:start_server:319 - Started WebSocket heartbeat monitor
+2025-06-22 12:18:56.635 | INFO     | __main__:start_server:329 - WebSocket server started successfully on ws://0.0.0.0:8766
+INFO:     Started server process [14108]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:7860 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [14108]
+Looking for dist directory at: /Users/khanakee/Desktop/quak-the-code-v1/venv/lib/python3.12/site-packages/pipecat_ai_small_webrtc_prebuilt/client/dist
+Starting WebSocket server on port 8766...
+WebSocket server started successfully on ws://0.0.0.0:8766

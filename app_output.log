@@ -1,0 +1,415 @@
+2025-06-25 23:27:51.712 | INFO     | pipecat:<module>:13 - ᓚᘏᗢ Pipecat 0.0.67 ᓚᘏᗢ
+2025-06-25 23:27:52.121 | INFO     | __main__:<module>:50 - API endpoints mounted
+2025-06-25 23:27:55.124 | INFO     | __main__:main:276 - Successfully loaded bot from agent.py
+2025-06-25 23:27:55.124 | INFO     | __main__:main:279 - Detected WebRTC-compatible bot, starting web server...
+2025-06-25 23:27:55.124 | INFO     | __main__:main:339 - WebSocket server thread started
+2025-06-25 23:27:55.125 | INFO     | __main__:start_server:303 - Starting WebSocket server on port 8766...
+2025-06-25 23:27:55.125 | INFO     | __main__:start_server:309 - Started WebSocket heartbeat monitor
+2025-06-25 23:27:55.146 | INFO     | __main__:start_server:319 - WebSocket server started successfully on ws://0.0.0.0:8766
+INFO:     Started server process [51425]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:7860 (Press CTRL+C to quit)
+Looking for dist directory at: /Users/khanakee/Desktop/quak-the-code-v1/venv/lib/python3.12/site-packages/pipecat_ai_small_webrtc_prebuilt/client/dist
+Starting WebSocket server on port 8766...
+WebSocket server started successfully on ws://0.0.0.0:8766
+INFO:     127.0.0.1:58356 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58356 - "GET /css/main.29d9b42c.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58357 - "GET /js/main.fde55e4a.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58357 - "GET /burrito.jpg HTTP/1.1" 200 OK
+2025-06-25 23:28:53.337 | INFO     | websocket_server:websocket_handler:94 - New websocket connection handler called with path: /
+2025-06-25 23:28:53.338 | INFO     | websocket_server:register:20 - New client connected. Total connections: 1
+2025-06-25 23:28:53.338 | INFO     | websocket_server:register:26 - Sent welcome message to new client
+2025-06-25 23:28:53.338 | INFO     | websocket_server:websocket_handler:120 - No existing orders to send to new client
+New websocket connection handler called with path: /
+New client connected. Total connections: 1
+Sent welcome message to new client
+No existing orders to send to new client
+INFO:     127.0.0.1:58356 - "GET /favicon.ico HTTP/1.1" 200 OK
+2025-06-25 23:28:55.015 | DEBUG    | pipecat.transports.network.webrtc_connection:_initialize:136 - Initializing new peer connection
+2025-06-25 23:28:55.034 | DEBUG    | pipecat.transports.network.webrtc_connection:_create_answer:214 - Creating answer
+2025-06-25 23:28:55.035 | DEBUG    | pipecat.transports.network.webrtc_connection:on_track:197 - Track audio received
+2025-06-25 23:28:55.036 | DEBUG    | pipecat.transports.network.webrtc_connection:on_icegatheringstatechange:193 - ICE gathering state is gathering
+2025-06-25 23:28:55.148 | DEBUG    | websocket_server:heartbeat_monitor:74 - Sending heartbeat to 1 connections
+2025-06-25 23:29:00.037 | DEBUG    | pipecat.transports.network.webrtc_connection:on_icegatheringstatechange:193 - ICE gathering state is complete
+2025-06-25 23:29:00.038 | DEBUG    | pipecat.transports.network.webrtc_connection:_create_answer:217 - Setting the answer after the local description is created
+INFO:     127.0.0.1:58356 - "POST /api/offer HTTP/1.1" 200 OK
+2025-06-25 23:29:00.038 | INFO     | agent:run_bot:71 - Starting bot
+2025-06-25 23:29:00.040 | DEBUG    | pipecat.audio.vad.silero:__init__:111 - Loading Silero VAD model...
+2025-06-25 23:29:00.147 | DEBUG    | pipecat.audio.vad.silero:__init__:133 - Loaded Silero VAD
+2025-06-25 23:29:00.148 | INFO     | agent:run_bot:149 - Registering order_food function with process_food_order handler
+2025-06-25 23:29:00.148 | INFO     | agent:run_bot:152 - Successfully registered order_food function
+2025-06-25 23:29:00.148 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking PipelineSource#0 -> SmallWebRTCInputTransport#0
+2025-06-25 23:29:00.148 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking SmallWebRTCInputTransport#0 -> AWSNovaSonicUserContextAggregator#0
+2025-06-25 23:29:00.148 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking AWSNovaSonicUserContextAggregator#0 -> AWSNovaSonicLLMService#0
+2025-06-25 23:29:00.148 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking AWSNovaSonicLLMService#0 -> SmallWebRTCOutputTransport#0
+2025-06-25 23:29:00.148 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking SmallWebRTCOutputTransport#0 -> AWSNovaSonicAssistantContextAggregator#0
+2025-06-25 23:29:00.148 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking AWSNovaSonicAssistantContextAggregator#0 -> PipelineSink#0
+2025-06-25 23:29:00.148 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking PipelineTaskSource#0 -> Pipeline#0
+2025-06-25 23:29:00.148 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking Pipeline#0 -> PipelineTaskSink#0
+2025-06-25 23:29:00.148 | DEBUG    | pipecat.pipeline.runner:run:38 - Runner PipelineRunner#0 started running PipelineTask#0
+2025-06-25 23:29:00.148 | INFO     | pipecat.services.aws_nova_sonic.aws:_start_connecting:302 - Connecting...
+2025-06-25 23:29:00.149 | DEBUG    | pipecat.transports.network.webrtc_connection:on_iceconnectionstatechange:187 - ICE connection state is checking, connection is connecting
+2025-06-25 23:29:00.149 | DEBUG    | pipecat.transports.network.webrtc_connection:_handle_new_connection_state:313 - Connection state changed to: connecting
+2025-06-25 23:29:00.151 | INFO     | pipecat.transports.network.small_webrtc:connect:308 - Connecting to Small WebRTC
+2025-06-25 23:29:00.151 | INFO     | pipecat.audio.vad.vad_analyzer:set_params:74 - Setting VAD params to: confidence=0.7 start_secs=0.2 stop_secs=1.0 min_volume=0.6
+2025-06-25 23:29:00.151 | INFO     | pipecat.transports.network.small_webrtc:connect:308 - Connecting to Small WebRTC
+INFO:     ('127.0.0.1', 58385) - "WebSocket /transcription" [accepted]
+2025-06-25 23:29:00.157 | INFO     | __main__:transcription_websocket:123 - Transcription WebSocket client connected
+INFO:     connection open
+2025-06-25 23:29:00.183 | DEBUG    | pipecat.transports.network.webrtc_connection:on_iceconnectionstatechange:187 - ICE connection state is completed, connection is connecting
+2025-06-25 23:29:00.186 | DEBUG    | pipecat.transports.network.webrtc_connection:_handle_new_connection_state:313 - Connection state changed to: connected
+2025-06-25 23:29:00.186 | DEBUG    | pipecat.transports.network.small_webrtc:on_connected:166 - Peer connection established.
+2025-06-25 23:29:00.186 | WARNING  | pipecat.transports.network.webrtc_connection:video_input_track:361 - No video transceiver is available
+2025-06-25 23:29:00.186 | DEBUG    | pipecat.transports.network.webrtc_connection:replace_audio_track:267 - Replacing audio track audio
+2025-06-25 23:29:00.186 | INFO     | agent:on_client_connected:192 - Client connected
+2025-06-25 23:29:00.188 | INFO     | pipecat.services.aws_nova_sonic.aws:_finish_connecting_if_context_available:336 - Finishing connecting (setting up session)...
+2025-06-25 23:29:00.188 | DEBUG    | pipecat.adapters.base_llm_adapter:from_standard_tools:17 - Retrieving the tools using the adapter: <class 'pipecat.adapters.services.aws_nova_sonic_adapter.AWSNovaSonicLLMAdapter'>
+2025-06-25 23:29:00.188 | DEBUG    | pipecat.adapters.base_llm_adapter:from_standard_tools:17 - Retrieving the tools using the adapter: <class 'pipecat.adapters.services.aws_nova_sonic_adapter.AWSNovaSonicLLMAdapter'>
+2025-06-25 23:29:00.188 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_finish_connecting_if_context_available:348 - Using tools: [{'toolSpec': {'name': 'get_current_weather', 'description': 'Get the current weather', 'inputSchema': {'json': '{"type": "object", "properties": {"location": {"type": "string", "description": "The city and state, e.g. San Francisco, CA"}, "format": {"type": "string", "enum": ["celsius", "fahrenheit"], "description": "The temperature unit to use. Infer this from the users location."}}, "required": ["location", "format"]}'}}}, {'toolSpec': {'name': 'get_current_time', 'description': 'Get the current time in a specific timezone', 'inputSchema': {'json': '{"type": "object", "properties": {"timezone": {"type": "string", "description": "The timezone to get the time for, e.g., UTC, EST, PST"}}, "required": ["timezone"]}'}}}, {'toolSpec': {'name': 'order_food', 'description': "Process a food order at GrillTalk fast food restaurant. IMPORTANT: ONLY use action='finalize' when the customer explicitly confirms they want to complete their order and pay. For making items into combos or updating sizes, use action='update_items' instead.", 'inputSchema': {'json': '{"type": "object", "properties": {"items": {"type": "array", "description": "List of items to order", "items": {"type": "object", "properties": {"item_id": {"type": "string", "description": "ID of the menu item (e.g., burger, taco, burrito)"}, "quantity": {"type": "integer", "description": "Number of this item to order", "default": 1}, "size": {"type": "string", "description": "Size of the item (small, medium, large)", "enum": ["small", "medium", "large"]}, "combo": {"type": "boolean", "description": "Whether this item is part of a combo", "default": false}, "combo_type": {"type": "string", "description": "Type of combo (regular_combo, large_combo)", "enum": ["regular_combo", "large_combo"]}, "customizations": {"type": "array", "description": "List of customizations for this item", "items": {"type": "string", "enum": ["no_mayo", "no_cheese", "no_lettuce", "no_tomato", "no_onion", "extra_cheese", "extra_sauce", "gluten_free_bun", "beef", "lettuce", "cheese", "salsa"]}}, "protein": {"type": "string", "description": "Protein choice for applicable items", "enum": ["beef", "chicken", "steak", "veggie"]}, "drink_choice": {"type": "string", "description": "Drink choice for combos", "enum": ["cola", "diet_cola", "lemon_lime", "orange", "iced_tea"]}}, "required": ["item_id"]}}, "special_instructions": {"type": "string", "description": "Any special instructions for the entire order"}, "action": {"type": "string", "description": "Action to take with this order: \'add_item\' to add items to the current order, \'update_items\' to update existing items (e.g., make them combos), \'finalize\' to complete the order (ONLY when customer explicitly confirms), \'new_order\' to start a new order, or \'clear\' to cancel the current order", "enum": ["add_item", "update_items", "finalize", "new_order", "clear"], "default": "add_item"}}, "required": ["items"]}'}}}]
+2025-06-25 23:29:00.188 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_finish_connecting_if_context_available:356 - Using system instruction: You are a friendly and helpful assistant at Grill Talk fast food restaurant drive-through. The user and you will engage in a spoken dialog. Follow these guidelines:
+1. Always greet customers with 'Welcome to Grill Talk, how can I help you?'
+2. Keep responses concise, generally 2-3 sentences for casual conversation.
+3. Use a conversational tone appropriate for spoken dialog.
+4. When taking food orders, ask about size, customizations, and combo upgrades.
+5. Suggest upsells like 'Would you like to make that a combo for just $1.50 more?'
+6. After each item is ordered, ask 'Would you like to order anything else?'
+7. When the customer is done ordering, confirm the complete order details and total price.
+8. Ask the customer to verify the order on the screen before finalizing.
+9. IMPORTANT: Only use the 'finalize' action when the customer explicitly confirms they want to complete their order and pay.
+10. When the customer confirms they want to finalize, FIRST call order_food with action='finalize', THEN say 'Your order has been finalized and your payment is being processed.' DO NOT ask for further verification.
+11. If you don't know something, admit it rather than making up information.
+12. When using functions, explain what you're doing to the user.
+13. IMPORTANT: Use the order_food function with action='add_item' to add items to the current order.
+14. IMPORTANT: Use order_food with action='update_items' to update existing items (like changing sizes or making items into combos).
+15. When the customer confirms they're done ordering, use order_food with action='finalize' to complete the order.
+16. If the customer wants to start over, use order_food with action='clear' to cancel the current order.
+17. CRITICAL: When a customer asks to make an item a combo or change the size, ALWAYS use order_food with action='update_items' and include the item_id and the new properties.
+18. CRITICAL: After verbally confirming any change to an order (like making an item a combo), ALWAYS call the order_food function to actually update the system.
+19. CRITICAL: When a customer orders an item, IMMEDIATELY call order_food with action='add_item' BEFORE responding verbally.
+20. CRITICAL: NEVER verbally confirm adding an item without first calling the order_food function.
+21. CRITICAL: For any food item mentioned (burger, chicken burrito, etc.), ALWAYS call order_food function to add it to the order.
+22. UPSELLING RECOMMENDATIONS:
+    - For single items, suggest making it a combo: 'Would you like to make that a combo with fries and a drink for just $1.50 more?'
+    - For medium items, suggest upgrading to large: 'Would you like to upgrade to a large for just $1.00 more?'
+    - For orders without sides, suggest adding fries or onion rings: 'Would you like to add a side of fries or onion rings to your order?'
+    - For orders without drinks, suggest adding a drink: 'Would you like to add a refreshing drink to your order?'
+    - During breakfast hours (before 11 AM), suggest breakfast items.
+    - During lunch/dinner hours, suggest popular combo meals.
+    - On hot days (above 80°F/27°C), suggest cold drinks.
+23. Here is the current menu for reference:
+=== GrillTalk MENU ===
+
+MAIN ITEMS:
+- Burger: $5.99 - Classic beef burger with lettuce, tomato, and cheese
+- Chicken Burger: $6.49 - Grilled chicken with lettuce, tomato, and mayo
+- Veggie Burger: $5.49 - Plant-based patty with fresh vegetables
+- Taco: $3.99 - Soft shell taco with beef, lettuce, cheese, and salsa
+- Burrito: $7.99 - Large flour tortilla filled with rice, beans, and your choice of protein
+- Chicken Burrito: $8.49 - Large flour tortilla filled with rice, beans, and grilled chicken
+- Quesadilla: $6.99 - Grilled tortilla filled with cheese and your choice of protein
+- Nachos: $5.99 - Tortilla chips topped with cheese, jalapeños, and salsa
+
+SIDES:
+- Fries: $2.99 - Crispy golden fries
+- Onion Rings: $3.49 - Crispy battered onion rings
+
+DRINKS:
+- Soda: $1.99 - Refreshing carbonated drink
+- Water: $1.49 - Bottled water
+
+SIZES:
+- Small: No additional cost
+- Medium: +$1.50
+- Large: +$2.50
+
+COMBO DEALS:
+- Regular Combo: Save $1.50 - Includes regular fries and a medium drink
+- Large Combo: Save $2.00 - Includes large fries and a large drink
+
+Start speaking when you hear the user say 'ready', but don't consider that 'ready' to be a meaningful part of the conversation other than as a trigger for you to start speaking.
+2025-06-25 23:29:00.189 | INFO     | pipecat.services.aws_nova_sonic.aws:_finish_connecting_if_context_available:373 - Finished connecting
+2025-06-25 23:29:00.189 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_send_assistant_response_trigger:955 - Sending assistant response trigger...
+2025-06-25 23:29:00.189 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_send_assistant_response_trigger:977 - Leading assistant response trigger with 0.4999570846557617s of blank audio
+2025-06-25 23:29:03.812 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_report_user_transcription_text_added:892 - User transcription text added: ready
+2025-06-25 23:29:04.596 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_report_assistant_response_started:841 - Assistant response started
+2025-06-25 23:29:04.597 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:385 - Bot started speaking
+2025-06-25 23:29:08.096 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_report_assistant_response_text_added:853 - Assistant response text added: Welcome to Grill Talk, how can I help you today?
+2025-06-25 23:29:08.667 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:400 - Bot stopped speaking
+2025-06-25 23:29:09.918 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_report_assistant_response_ended:877 - Assistant response ended
+2025-06-25 23:29:23.361 | INFO     | websocket_server:websocket_handler:126 - Received message from client: {"type":"ping"}
+2025-06-25 23:29:23.361 | INFO     | websocket_server:websocket_handler:130 - Received ping, sending pong
+2025-06-25 23:29:25.149 | DEBUG    | websocket_server:heartbeat_monitor:74 - Sending heartbeat to 1 connections
+2025-06-25 23:29:53.361 | INFO     | websocket_server:websocket_handler:126 - Received message from client: {"type":"ping"}
+2025-06-25 23:29:53.361 | INFO     | websocket_server:websocket_handler:130 - Received ping, sending pong
+2025-06-25 23:29:55.150 | DEBUG    | websocket_server:heartbeat_monitor:74 - Sending heartbeat to 1 connections
+2025-06-25 23:30:10.309 | ERROR    | pipecat.services.aws_nova_sonic.aws:_receive_task_handler:729 - AWSNovaSonicLLMService#0 error processing responses: RequestId=ce344176-b450-4071-bfac-54fe7b6a0a6f : InternalErrorCode=531::RST_STREAM closed stream. HTTP/2 error code: NO_ERROR
+2025-06-25 23:30:10.309 | DEBUG    | pipecat.services.aws_nova_sonic.aws:reset_conversation:208 - Resetting conversation
+2025-06-25 23:30:10.309 | INFO     | pipecat.services.aws_nova_sonic.aws:_disconnect:382 - Disconnecting...
+2025-06-25 23:30:11.309 | INFO     | pipecat.services.aws_nova_sonic.aws:_disconnect:420 - Finished disconnecting
+2025-06-25 23:30:11.310 | INFO     | pipecat.services.aws_nova_sonic.aws:_start_connecting:302 - Connecting...
+2025-06-25 23:30:11.312 | INFO     | pipecat.services.aws_nova_sonic.aws:_finish_connecting_if_context_available:336 - Finishing connecting (setting up session)...
+2025-06-25 23:30:11.312 | DEBUG    | pipecat.adapters.base_llm_adapter:from_standard_tools:17 - Retrieving the tools using the adapter: <class 'pipecat.adapters.services.aws_nova_sonic_adapter.AWSNovaSonicLLMAdapter'>
+2025-06-25 23:30:11.313 | DEBUG    | pipecat.adapters.base_llm_adapter:from_standard_tools:17 - Retrieving the tools using the adapter: <class 'pipecat.adapters.services.aws_nova_sonic_adapter.AWSNovaSonicLLMAdapter'>
+2025-06-25 23:30:11.313 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_finish_connecting_if_context_available:348 - Using tools: [{'toolSpec': {'name': 'get_current_weather', 'description': 'Get the current weather', 'inputSchema': {'json': '{"type": "object", "properties": {"location": {"type": "string", "description": "The city and state, e.g. San Francisco, CA"}, "format": {"type": "string", "enum": ["celsius", "fahrenheit"], "description": "The temperature unit to use. Infer this from the users location."}}, "required": ["location", "format"]}'}}}, {'toolSpec': {'name': 'get_current_time', 'description': 'Get the current time in a specific timezone', 'inputSchema': {'json': '{"type": "object", "properties": {"timezone": {"type": "string", "description": "The timezone to get the time for, e.g., UTC, EST, PST"}}, "required": ["timezone"]}'}}}, {'toolSpec': {'name': 'order_food', 'description': "Process a food order at GrillTalk fast food restaurant. IMPORTANT: ONLY use action='finalize' when the customer explicitly confirms they want to complete their order and pay. For making items into combos or updating sizes, use action='update_items' instead.", 'inputSchema': {'json': '{"type": "object", "properties": {"items": {"type": "array", "description": "List of items to order", "items": {"type": "object", "properties": {"item_id": {"type": "string", "description": "ID of the menu item (e.g., burger, taco, burrito)"}, "quantity": {"type": "integer", "description": "Number of this item to order", "default": 1}, "size": {"type": "string", "description": "Size of the item (small, medium, large)", "enum": ["small", "medium", "large"]}, "combo": {"type": "boolean", "description": "Whether this item is part of a combo", "default": false}, "combo_type": {"type": "string", "description": "Type of combo (regular_combo, large_combo)", "enum": ["regular_combo", "large_combo"]}, "customizations": {"type": "array", "description": "List of customizations for this item", "items": {"type": "string", "enum": ["no_mayo", "no_cheese", "no_lettuce", "no_tomato", "no_onion", "extra_cheese", "extra_sauce", "gluten_free_bun", "beef", "lettuce", "cheese", "salsa"]}}, "protein": {"type": "string", "description": "Protein choice for applicable items", "enum": ["beef", "chicken", "steak", "veggie"]}, "drink_choice": {"type": "string", "description": "Drink choice for combos", "enum": ["cola", "diet_cola", "lemon_lime", "orange", "iced_tea"]}}, "required": ["item_id"]}}, "special_instructions": {"type": "string", "description": "Any special instructions for the entire order"}, "action": {"type": "string", "description": "Action to take with this order: \'add_item\' to add items to the current order, \'update_items\' to update existing items (e.g., make them combos), \'finalize\' to complete the order (ONLY when customer explicitly confirms), \'new_order\' to start a new order, or \'clear\' to cancel the current order", "enum": ["add_item", "update_items", "finalize", "new_order", "clear"], "default": "add_item"}}, "required": ["items"]}'}}}]
+2025-06-25 23:30:11.313 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_finish_connecting_if_context_available:356 - Using system instruction: You are a friendly and helpful assistant at Grill Talk fast food restaurant drive-through. The user and you will engage in a spoken dialog. Follow these guidelines:
+1. Always greet customers with 'Welcome to Grill Talk, how can I help you?'
+2. Keep responses concise, generally 2-3 sentences for casual conversation.
+3. Use a conversational tone appropriate for spoken dialog.
+4. When taking food orders, ask about size, customizations, and combo upgrades.
+5. Suggest upsells like 'Would you like to make that a combo for just $1.50 more?'
+6. After each item is ordered, ask 'Would you like to order anything else?'
+7. When the customer is done ordering, confirm the complete order details and total price.
+8. Ask the customer to verify the order on the screen before finalizing.
+9. IMPORTANT: Only use the 'finalize' action when the customer explicitly confirms they want to complete their order and pay.
+10. When the customer confirms they want to finalize, FIRST call order_food with action='finalize', THEN say 'Your order has been finalized and your payment is being processed.' DO NOT ask for further verification.
+11. If you don't know something, admit it rather than making up information.
+12. When using functions, explain what you're doing to the user.
+13. IMPORTANT: Use the order_food function with action='add_item' to add items to the current order.
+14. IMPORTANT: Use order_food with action='update_items' to update existing items (like changing sizes or making items into combos).
+15. When the customer confirms they're done ordering, use order_food with action='finalize' to complete the order.
+16. If the customer wants to start over, use order_food with action='clear' to cancel the current order.
+17. CRITICAL: When a customer asks to make an item a combo or change the size, ALWAYS use order_food with action='update_items' and include the item_id and the new properties.
+18. CRITICAL: After verbally confirming any change to an order (like making an item a combo), ALWAYS call the order_food function to actually update the system.
+19. CRITICAL: When a customer orders an item, IMMEDIATELY call order_food with action='add_item' BEFORE responding verbally.
+20. CRITICAL: NEVER verbally confirm adding an item without first calling the order_food function.
+21. CRITICAL: For any food item mentioned (burger, chicken burrito, etc.), ALWAYS call order_food function to add it to the order.
+22. UPSELLING RECOMMENDATIONS:
+    - For single items, suggest making it a combo: 'Would you like to make that a combo with fries and a drink for just $1.50 more?'
+    - For medium items, suggest upgrading to large: 'Would you like to upgrade to a large for just $1.00 more?'
+    - For orders without sides, suggest adding fries or onion rings: 'Would you like to add a side of fries or onion rings to your order?'
+    - For orders without drinks, suggest adding a drink: 'Would you like to add a refreshing drink to your order?'
+    - During breakfast hours (before 11 AM), suggest breakfast items.
+    - During lunch/dinner hours, suggest popular combo meals.
+    - On hot days (above 80°F/27°C), suggest cold drinks.
+23. Here is the current menu for reference:
+=== GrillTalk MENU ===
+
+MAIN ITEMS:
+- Burger: $5.99 - Classic beef burger with lettuce, tomato, and cheese
+- Chicken Burger: $6.49 - Grilled chicken with lettuce, tomato, and mayo
+- Veggie Burger: $5.49 - Plant-based patty with fresh vegetables
+- Taco: $3.99 - Soft shell taco with beef, lettuce, cheese, and salsa
+- Burrito: $7.99 - Large flour tortilla filled with rice, beans, and your choice of protein
+- Chicken Burrito: $8.49 - Large flour tortilla filled with rice, beans, and grilled chicken
+- Quesadilla: $6.99 - Grilled tortilla filled with cheese and your choice of protein
+- Nachos: $5.99 - Tortilla chips topped with cheese, jalapeños, and salsa
+
+SIDES:
+- Fries: $2.99 - Crispy golden fries
+- Onion Rings: $3.49 - Crispy battered onion rings
+
+DRINKS:
+- Soda: $1.99 - Refreshing carbonated drink
+- Water: $1.49 - Bottled water
+
+SIZES:
+- Small: No additional cost
+- Medium: +$1.50
+- Large: +$2.50
+
+COMBO DEALS:
+- Regular Combo: Save $1.50 - Includes regular fries and a medium drink
+- Large Combo: Save $2.00 - Includes large fries and a large drink
+
+Start speaking when you hear the user say 'ready', but don't consider that 'ready' to be a meaningful part of the conversation other than as a trigger for you to start speaking.
+2025-06-25 23:30:11.313 | INFO     | pipecat.services.aws_nova_sonic.aws:_finish_connecting_if_context_available:373 - Finished connecting
+2025-06-25 23:30:23.383 | INFO     | websocket_server:websocket_handler:126 - Received message from client: {"type":"ping"}
+2025-06-25 23:30:23.383 | INFO     | websocket_server:websocket_handler:130 - Received ping, sending pong
+2025-06-25 23:30:25.151 | DEBUG    | websocket_server:heartbeat_monitor:74 - Sending heartbeat to 1 connections
+2025-06-25 23:30:35.724 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:30:37.737 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:30:39.747 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:30:41.758 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:30:43.768 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:30:44.950 | INFO     | websocket_server:websocket_handler:94 - New websocket connection handler called with path: /
+2025-06-25 23:30:44.950 | INFO     | websocket_server:register:20 - New client connected. Total connections: 2
+2025-06-25 23:30:44.950 | INFO     | websocket_server:register:26 - Sent welcome message to new client
+2025-06-25 23:30:44.950 | INFO     | websocket_server:websocket_handler:120 - No existing orders to send to new client
+2025-06-25 23:30:45.193 | DEBUG    | pipecat.transports.network.webrtc_connection:_initialize:136 - Initializing new peer connection
+2025-06-25 23:30:45.195 | DEBUG    | pipecat.transports.network.webrtc_connection:_create_answer:214 - Creating answer
+2025-06-25 23:30:45.195 | DEBUG    | pipecat.transports.network.webrtc_connection:on_track:197 - Track audio received
+2025-06-25 23:30:45.196 | DEBUG    | pipecat.transports.network.webrtc_connection:on_icegatheringstatechange:193 - ICE gathering state is gathering
+2025-06-25 23:30:45.778 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:30:47.788 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:30:49.799 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:30:50.198 | DEBUG    | pipecat.transports.network.webrtc_connection:on_icegatheringstatechange:193 - ICE gathering state is complete
+2025-06-25 23:30:50.198 | DEBUG    | pipecat.transports.network.webrtc_connection:_create_answer:217 - Setting the answer after the local description is created
+Registering order_food function with process_food_order handler
+Successfully registered order_food function
+Received message from client: {"type":"ping"}
+Received ping, sending pong
+Received message from client: {"type":"ping"}
+Received ping, sending pong
+Received message from client: {"type":"ping"}
+Received ping, sending pong
+New websocket connection handler called with path: /
+New client connected. Total connections: 2
+Sent welcome message to new client
+No existing orders to send to new client
+INFO:     ::1:58940 - "POST /api/offer HTTP/1.1" 200 OK
+2025-06-25 23:30:50.198 | INFO     | agent:run_bot:71 - Starting bot
+2025-06-25 23:30:50.200 | DEBUG    | pipecat.audio.vad.silero:__init__:111 - Loading Silero VAD model...
+2025-06-25 23:30:50.263 | DEBUG    | pipecat.audio.vad.silero:__init__:133 - Loaded Silero VAD
+2025-06-25 23:30:50.263 | INFO     | agent:run_bot:149 - Registering order_food function with process_food_order handler
+2025-06-25 23:30:50.263 | INFO     | agent:run_bot:152 - Successfully registered order_food function
+2025-06-25 23:30:50.263 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking PipelineSource#1 -> SmallWebRTCInputTransport#1
+2025-06-25 23:30:50.263 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking SmallWebRTCInputTransport#1 -> AWSNovaSonicUserContextAggregator#1
+2025-06-25 23:30:50.263 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking AWSNovaSonicUserContextAggregator#1 -> AWSNovaSonicLLMService#1
+2025-06-25 23:30:50.263 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking AWSNovaSonicLLMService#1 -> SmallWebRTCOutputTransport#1
+2025-06-25 23:30:50.263 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking SmallWebRTCOutputTransport#1 -> AWSNovaSonicAssistantContextAggregator#1
+2025-06-25 23:30:50.263 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking AWSNovaSonicAssistantContextAggregator#1 -> PipelineSink#1
+2025-06-25 23:30:50.263 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking PipelineTaskSource#1 -> Pipeline#1
+2025-06-25 23:30:50.263 | DEBUG    | pipecat.processors.frame_processor:link:178 - Linking Pipeline#1 -> PipelineTaskSink#1
+2025-06-25 23:30:50.264 | DEBUG    | pipecat.pipeline.runner:run:38 - Runner PipelineRunner#1 started running PipelineTask#1
+2025-06-25 23:30:50.264 | INFO     | pipecat.services.aws_nova_sonic.aws:_start_connecting:302 - Connecting...
+2025-06-25 23:30:50.264 | DEBUG    | pipecat.transports.network.webrtc_connection:on_iceconnectionstatechange:187 - ICE connection state is checking, connection is connecting
+2025-06-25 23:30:50.265 | DEBUG    | pipecat.transports.network.webrtc_connection:_handle_new_connection_state:313 - Connection state changed to: connecting
+2025-06-25 23:30:50.266 | INFO     | pipecat.transports.network.small_webrtc:connect:308 - Connecting to Small WebRTC
+2025-06-25 23:30:50.266 | INFO     | pipecat.audio.vad.vad_analyzer:set_params:74 - Setting VAD params to: confidence=0.7 start_secs=0.2 stop_secs=1.0 min_volume=0.6
+2025-06-25 23:30:50.266 | INFO     | pipecat.transports.network.small_webrtc:connect:308 - Connecting to Small WebRTC
+INFO:     ('::1', 58978) - "WebSocket /transcription" [accepted]
+2025-06-25 23:30:50.280 | INFO     | __main__:transcription_websocket:123 - Transcription WebSocket client connected
+INFO:     connection open
+2025-06-25 23:30:50.286 | DEBUG    | pipecat.transports.network.webrtc_connection:on_iceconnectionstatechange:187 - ICE connection state is completed, connection is connecting
+2025-06-25 23:30:50.288 | DEBUG    | pipecat.transports.network.webrtc_connection:_handle_new_connection_state:313 - Connection state changed to: connected
+2025-06-25 23:30:50.289 | DEBUG    | pipecat.transports.network.small_webrtc:on_connected:166 - Peer connection established.
+2025-06-25 23:30:50.289 | WARNING  | pipecat.transports.network.webrtc_connection:video_input_track:361 - No video transceiver is available
+2025-06-25 23:30:50.289 | DEBUG    | pipecat.transports.network.webrtc_connection:replace_audio_track:267 - Replacing audio track audio
+2025-06-25 23:30:50.289 | INFO     | agent:on_client_connected:192 - Client connected
+2025-06-25 23:30:50.290 | INFO     | pipecat.services.aws_nova_sonic.aws:_finish_connecting_if_context_available:336 - Finishing connecting (setting up session)...
+2025-06-25 23:30:50.291 | DEBUG    | pipecat.adapters.base_llm_adapter:from_standard_tools:17 - Retrieving the tools using the adapter: <class 'pipecat.adapters.services.aws_nova_sonic_adapter.AWSNovaSonicLLMAdapter'>
+2025-06-25 23:30:50.291 | DEBUG    | pipecat.adapters.base_llm_adapter:from_standard_tools:17 - Retrieving the tools using the adapter: <class 'pipecat.adapters.services.aws_nova_sonic_adapter.AWSNovaSonicLLMAdapter'>
+2025-06-25 23:30:50.291 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_finish_connecting_if_context_available:348 - Using tools: [{'toolSpec': {'name': 'get_current_weather', 'description': 'Get the current weather', 'inputSchema': {'json': '{"type": "object", "properties": {"location": {"type": "string", "description": "The city and state, e.g. San Francisco, CA"}, "format": {"type": "string", "enum": ["celsius", "fahrenheit"], "description": "The temperature unit to use. Infer this from the users location."}}, "required": ["location", "format"]}'}}}, {'toolSpec': {'name': 'get_current_time', 'description': 'Get the current time in a specific timezone', 'inputSchema': {'json': '{"type": "object", "properties": {"timezone": {"type": "string", "description": "The timezone to get the time for, e.g., UTC, EST, PST"}}, "required": ["timezone"]}'}}}, {'toolSpec': {'name': 'order_food', 'description': "Process a food order at GrillTalk fast food restaurant. IMPORTANT: ONLY use action='finalize' when the customer explicitly confirms they want to complete their order and pay. For making items into combos or updating sizes, use action='update_items' instead.", 'inputSchema': {'json': '{"type": "object", "properties": {"items": {"type": "array", "description": "List of items to order", "items": {"type": "object", "properties": {"item_id": {"type": "string", "description": "ID of the menu item (e.g., burger, taco, burrito)"}, "quantity": {"type": "integer", "description": "Number of this item to order", "default": 1}, "size": {"type": "string", "description": "Size of the item (small, medium, large)", "enum": ["small", "medium", "large"]}, "combo": {"type": "boolean", "description": "Whether this item is part of a combo", "default": false}, "combo_type": {"type": "string", "description": "Type of combo (regular_combo, large_combo)", "enum": ["regular_combo", "large_combo"]}, "customizations": {"type": "array", "description": "List of customizations for this item", "items": {"type": "string", "enum": ["no_mayo", "no_cheese", "no_lettuce", "no_tomato", "no_onion", "extra_cheese", "extra_sauce", "gluten_free_bun", "beef", "lettuce", "cheese", "salsa"]}}, "protein": {"type": "string", "description": "Protein choice for applicable items", "enum": ["beef", "chicken", "steak", "veggie"]}, "drink_choice": {"type": "string", "description": "Drink choice for combos", "enum": ["cola", "diet_cola", "lemon_lime", "orange", "iced_tea"]}}, "required": ["item_id"]}}, "special_instructions": {"type": "string", "description": "Any special instructions for the entire order"}, "action": {"type": "string", "description": "Action to take with this order: \'add_item\' to add items to the current order, \'update_items\' to update existing items (e.g., make them combos), \'finalize\' to complete the order (ONLY when customer explicitly confirms), \'new_order\' to start a new order, or \'clear\' to cancel the current order", "enum": ["add_item", "update_items", "finalize", "new_order", "clear"], "default": "add_item"}}, "required": ["items"]}'}}}]
+2025-06-25 23:30:50.291 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_finish_connecting_if_context_available:356 - Using system instruction: You are a friendly and helpful assistant at Grill Talk fast food restaurant drive-through. The user and you will engage in a spoken dialog. Follow these guidelines:
+1. Always greet customers with 'Welcome to Grill Talk, how can I help you?'
+2. Keep responses concise, generally 2-3 sentences for casual conversation.
+3. Use a conversational tone appropriate for spoken dialog.
+4. When taking food orders, ask about size, customizations, and combo upgrades.
+5. Suggest upsells like 'Would you like to make that a combo for just $1.50 more?'
+6. After each item is ordered, ask 'Would you like to order anything else?'
+7. When the customer is done ordering, confirm the complete order details and total price.
+8. Ask the customer to verify the order on the screen before finalizing.
+9. IMPORTANT: Only use the 'finalize' action when the customer explicitly confirms they want to complete their order and pay.
+10. When the customer confirms they want to finalize, FIRST call order_food with action='finalize', THEN say 'Your order has been finalized and your payment is being processed.' DO NOT ask for further verification.
+11. If you don't know something, admit it rather than making up information.
+12. When using functions, explain what you're doing to the user.
+13. IMPORTANT: Use the order_food function with action='add_item' to add items to the current order.
+14. IMPORTANT: Use order_food with action='update_items' to update existing items (like changing sizes or making items into combos).
+15. When the customer confirms they're done ordering, use order_food with action='finalize' to complete the order.
+16. If the customer wants to start over, use order_food with action='clear' to cancel the current order.
+17. CRITICAL: When a customer asks to make an item a combo or change the size, ALWAYS use order_food with action='update_items' and include the item_id and the new properties.
+18. CRITICAL: After verbally confirming any change to an order (like making an item a combo), ALWAYS call the order_food function to actually update the system.
+19. CRITICAL: When a customer orders an item, IMMEDIATELY call order_food with action='add_item' BEFORE responding verbally.
+20. CRITICAL: NEVER verbally confirm adding an item without first calling the order_food function.
+21. CRITICAL: For any food item mentioned (burger, chicken burrito, etc.), ALWAYS call order_food function to add it to the order.
+22. UPSELLING RECOMMENDATIONS:
+    - For single items, suggest making it a combo: 'Would you like to make that a combo with fries and a drink for just $1.50 more?'
+    - For medium items, suggest upgrading to large: 'Would you like to upgrade to a large for just $1.00 more?'
+    - For orders without sides, suggest adding fries or onion rings: 'Would you like to add a side of fries or onion rings to your order?'
+    - For orders without drinks, suggest adding a drink: 'Would you like to add a refreshing drink to your order?'
+    - During breakfast hours (before 11 AM), suggest breakfast items.
+    - During lunch/dinner hours, suggest popular combo meals.
+    - On hot days (above 80°F/27°C), suggest cold drinks.
+23. Here is the current menu for reference:
+=== GrillTalk MENU ===
+
+MAIN ITEMS:
+- Burger: $5.99 - Classic beef burger with lettuce, tomato, and cheese
+- Chicken Burger: $6.49 - Grilled chicken with lettuce, tomato, and mayo
+- Veggie Burger: $5.49 - Plant-based patty with fresh vegetables
+- Taco: $3.99 - Soft shell taco with beef, lettuce, cheese, and salsa
+- Burrito: $7.99 - Large flour tortilla filled with rice, beans, and your choice of protein
+- Chicken Burrito: $8.49 - Large flour tortilla filled with rice, beans, and grilled chicken
+- Quesadilla: $6.99 - Grilled tortilla filled with cheese and your choice of protein
+- Nachos: $5.99 - Tortilla chips topped with cheese, jalapeños, and salsa
+
+SIDES:
+- Fries: $2.99 - Crispy golden fries
+- Onion Rings: $3.49 - Crispy battered onion rings
+
+DRINKS:
+- Soda: $1.99 - Refreshing carbonated drink
+- Water: $1.49 - Bottled water
+
+SIZES:
+- Small: No additional cost
+- Medium: +$1.50
+- Large: +$2.50
+
+COMBO DEALS:
+- Regular Combo: Save $1.50 - Includes regular fries and a medium drink
+- Large Combo: Save $2.00 - Includes large fries and a large drink
+
+Start speaking when you hear the user say 'ready', but don't consider that 'ready' to be a meaningful part of the conversation other than as a trigger for you to start speaking.
+2025-06-25 23:30:50.291 | INFO     | pipecat.services.aws_nova_sonic.aws:_finish_connecting_if_context_available:373 - Finished connecting
+2025-06-25 23:30:50.291 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_send_assistant_response_trigger:955 - Sending assistant response trigger...
+2025-06-25 23:30:50.291 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_send_assistant_response_trigger:977 - Leading assistant response trigger with 0.49996209144592285s of blank audio
+2025-06-25 23:30:51.810 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:30:53.427 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_report_user_transcription_text_added:892 - User transcription text added: ready
+2025-06-25 23:30:53.819 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:30:54.239 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_report_assistant_response_started:841 - Assistant response started
+2025-06-25 23:30:54.240 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:385 - Bot started speaking
+2025-06-25 23:30:55.152 | DEBUG    | websocket_server:heartbeat_monitor:74 - Sending heartbeat to 2 connections
+2025-06-25 23:30:55.764 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:214 - User started speaking
+2025-06-25 23:30:55.766 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:400 - Bot stopped speaking
+2025-06-25 23:30:55.829 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:30:56.014 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:385 - Bot started speaking
+2025-06-25 23:30:56.740 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_report_assistant_response_text_added:853 - Assistant response text added: Welcome to Grill Talk, how can I help you today?
+2025-06-25 23:30:56.851 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:224 - User stopped speaking
+2025-06-25 23:30:57.017 | DEBUG    | pipecat.services.aws_nova_sonic.aws:_report_assistant_response_ended:877 - Assistant response ended
+2025-06-25 23:30:57.479 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:400 - Bot stopped speaking
+2025-06-25 23:30:57.840 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:30:59.851 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:01.862 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:02.554 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:258 - Received an unexpected media stream error while reading the audio.
+2025-06-25 23:31:02.554 | DEBUG    | pipecat.transports.network.webrtc_connection:on_ended:202 - Track audio ended
+2025-06-25 23:31:02.554 | DEBUG    | pipecat.transports.network.webrtc_connection:on_iceconnectionstatechange:187 - ICE connection state is closed, connection is closed
+2025-06-25 23:31:02.555 | DEBUG    | pipecat.transports.network.webrtc_connection:_handle_new_connection_state:313 - Connection state changed to: closed
+2025-06-25 23:31:02.555 | INFO     | __main__:handle_disconnected:201 - Discarding peer connection for pc_id: SmallWebRTCConnection#0
+2025-06-25 23:31:02.555 | INFO     | __main__:handle_disconnected:204 - Successfully removed connection from pcs_map
+2025-06-25 23:31:02.555 | DEBUG    | pipecat.transports.network.small_webrtc:on_closed:176 - Client connection closed.
+2025-06-25 23:31:02.555 | INFO     | agent:on_client_closed:205 - Client closed connection
+2025-06-25 23:31:02.555 | DEBUG    | pipecat.pipeline.task:cancel:288 - Canceling pipeline task PipelineTask#0
+2025-06-25 23:31:02.556 | INFO     | pipecat.services.aws_nova_sonic.aws:_disconnect:382 - Disconnecting...
+2025-06-25 23:31:03.154 | ERROR    | pipecat.services.aws_nova_sonic.aws:_receive_task_handler:729 - AWSNovaSonicLLMService#0 error processing responses: Invalid input request, please fix your input and try again.
+2025-06-25 23:31:03.558 | INFO     | pipecat.services.aws_nova_sonic.aws:_disconnect:420 - Finished disconnecting
+2025-06-25 23:31:03.559 | WARNING  | pipecat.pipeline.task:_print_dangling_tasks:587 - Dangling tasks detected: ['AWSNovaSonicLLMService#0::finalize_assistant_response']
+2025-06-25 23:31:03.559 | DEBUG    | pipecat.pipeline.runner:run:55 - Runner PipelineRunner#0 finished running PipelineTask#0
+2025-06-25 23:31:10.159 | INFO     | __main__:transcription_websocket:133 - Transcription WebSocket client disconnected
+INFO:     connection closed
+2025-06-25 23:31:14.977 | INFO     | websocket_server:websocket_handler:126 - Received message from client: {"type":"ping"}
+2025-06-25 23:31:14.977 | INFO     | websocket_server:websocket_handler:130 - Received ping, sending pong
+2025-06-25 23:31:23.347 | INFO     | websocket_server:websocket_handler:134 - Connection closed
+2025-06-25 23:31:23.348 | INFO     | websocket_server:unregister:34 - Client disconnected. Total connections: 1
+2025-06-25 23:31:25.153 | DEBUG    | websocket_server:heartbeat_monitor:74 - Sending heartbeat to 1 connections
+2025-06-25 23:31:25.654 | INFO     | __main__:transcription_websocket:133 - Transcription WebSocket client disconnected
+2025-06-25 23:31:25.655 | INFO     | websocket_server:unregister:34 - Client disconnected. Total connections: 0
+INFO:     connection closed
+2025-06-25 23:31:27.637 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:29.648 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:31.658 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:33.669 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:35.680 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:37.690 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:39.700 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:41.712 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:43.722 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:45.734 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:47.746 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:49.757 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:51.767 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:53.778 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:55.789 | WARNING  | pipecat.transports.network.small_webrtc:read_audio_frame:255 - Timeout: No audio frame received within the specified time.
+2025-06-25 23:31:55.796 | DEBUG    | pipecat.transports.network.webrtc_connection:on_iceconnectionstatechange:187 - ICE connection state is closed, connection is closed
+2025-06-25 23:31:55.796 | DEBUG    | pipecat.transports.network.webrtc_connection:_handle_new_connection_state:313 - Connection state changed to: closed
+2025-06-25 23:31:55.796 | INFO     | __main__:handle_disconnected:201 - Discarding peer connection for pc_id: SmallWebRTCConnection#1
+2025-06-25 23:31:55.796 | INFO     | __main__:handle_disconnected:204 - Successfully removed connection from pcs_map
+2025-06-25 23:31:55.796 | DEBUG    | pipecat.transports.network.small_webrtc:on_closed:176 - Client connection closed.
+2025-06-25 23:31:55.796 | INFO     | agent:on_client_closed:205 - Client closed connection
+2025-06-25 23:31:55.796 | DEBUG    | pipecat.pipeline.task:cancel:288 - Canceling pipeline task PipelineTask#1
+2025-06-25 23:31:55.797 | INFO     | pipecat.services.aws_nova_sonic.aws:_disconnect:382 - Disconnecting...
+2025-06-25 23:31:56.376 | ERROR    | pipecat.services.aws_nova_sonic.aws:_receive_task_handler:729 - AWSNovaSonicLLMService#1 error processing responses: Invalid input request, please fix your input and try again.
+2025-06-25 23:31:56.797 | INFO     | pipecat.services.aws_nova_sonic.aws:_disconnect:420 - Finished disconnecting
+2025-06-25 23:31:56.801 | WARNING  | pipecat.pipeline.task:_print_dangling_tasks:587 - Dangling tasks detected: ['AWSNovaSonicLLMService#1::finalize_assistant_response']
+2025-06-25 23:31:56.801 | DEBUG    | pipecat.pipeline.runner:run:55 - Runner PipelineRunner#1 finished running PipelineTask#1
