@@ -1,0 +1,8 @@
+websockets==11.0.3
+fastapi==0.104.1
+uvicorn==0.24.0
+loguru==0.7.3
+python-dotenv==1.0.0
+pipecat-ai[webrtc,silero,aws-nova-sonic]==0.0.67
+pipecat-ai-small-webrtc-prebuilt
+boto3
