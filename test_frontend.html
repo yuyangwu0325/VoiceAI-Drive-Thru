@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .connected { background-color: #d4edda; color: #155724; }
+        .disconnected { background-color: #f8d7da; color: #721c24; }
+        .log { background-color: #f8f9fa; padding: 10px; height: 300px; overflow-y: auto; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>Frontend Connection Test</h1>
+    
+    <div id="status" class="status disconnected">WebSocket: Disconnected</div>
+    
+    <h3>Connection Log:</h3>
+    <div id="log" class="log"></div>
+    
+    <h3>Order Display Test:</h3>
+    <div id="orderDisplay">
+        <p>No orders to display</p>
+    </div>
+
+    <script>
+        const statusDiv = document.getElementById('status');
+        const logDiv = document.getElementById('log');
+        const orderDiv = document.getElementById('orderDisplay');
+        
+        function log(message) {
+            const timestamp = new Date().toLocaleTimeString();
+            logDiv.innerHTML += `[${timestamp}] ${message}\n`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+        
+        function updateStatus(connected) {
+            if (connected) {
+                statusDiv.textContent = 'WebSocket: Connected';
+                statusDiv.className = 'status connected';
+            } else {
+                statusDiv.textContent = 'WebSocket: Disconnected';
+                statusDiv.className = 'status disconnected';
+            }
+        }
+        
+        // Test WebSocket connection
+        log('Connecting to WebSocket server...');
+        const ws = new WebSocket('ws://localhost:8766');
+        
+        ws.onopen = function() {
+            log('✅ WebSocket connected successfully');
+            updateStatus(true);
+            
+            // Send ping
+            ws.send(JSON.stringify({type: 'ping'}));
+            log('📤 Sent ping');
+        };
+        
+        ws.onmessage = function(event) {
+            try {
+                const data = JSON.parse(event.data);
+                log(`📥 Received: ${data.type || 'unknown'}`);
+                
+                if (data.type === 'order_update') {
+                    log(`🍔 Order update: ${data.items?.length || 0} items, $${data.total_price || 0}`);
+                    
+                    // Display order
+                    if (data.items && data.items.length > 0) {
+                        let orderHtml = '<h4>Current Order:</h4><ul>';
+                        data.items.forEach(item => {
+                            orderHtml += `<li>${item.description} - $${item.price}</li>`;
+                        });
+                        orderHtml += `</ul><p><strong>Total: $${data.items.reduce((sum, item) => sum + item.price, 0).toFixed(2)}</strong></p>`;
+                        orderDiv.innerHTML = orderHtml;
+                    }
+                }
+                
+                if (data.type === 'pong') {
+                    log('📥 Pong received');
+                }
+            } catch (e) {
+                log(`📥 Raw message: ${event.data}`);
+            }
+        };
+        
+        ws.onclose = function() {
+            log('❌ WebSocket disconnected');
+            updateStatus(false);
+        };
+        
+        ws.onerror = function(error) {
+            log(`❌ WebSocket error: ${error}`);
+            updateStatus(false);
+        };
+        
+        // Send periodic pings
+        setInterval(() => {
+            if (ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify({type: 'ping'}));
+                log('📤 Sent keepalive ping');
+            }
+        }, 30000);
+    </script>
+</body>
+</html>
